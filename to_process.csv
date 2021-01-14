@@ -1,0 +1,13 @@
+name,pop_file,area_file,shp_file,layer,geo_name
+gpw_gadm_level0,input/gpw_2015.tif,input/gpw_area.tif,input/gadm_full/gadm36_levels.gpkg,level0,GID_0
+ghsl_gadm_level0,input/ghs_2015.tif,input/ghs_area.tif,input/gadm_full/gadm36_levels.gpkg,level0,GID_0
+worldpop_gadm_level0,input/worldpop_2015.tif,"input/worldpop_2015_alternative_area.tif""",input/gadm_full/gadm36_levels.gpkg,level0,GID_0
+landscan_gadm_level0,input/andscan_2015.tif,input/landscan_area.tif,input/gadm_full/gadm36_levels.gpkg,level0,GID_0
+gpw_gadm_level1,input/gpw_2015.tif,input/gpw_area.tif,input/gadm_full/gadm36_levels.gpkg,level1,GID_1
+ghsl_gadm_level1,input/ghs_2015.tif,input/ghs_area.tif,input/gadm_full/gadm36_levels.gpkg,level1,GID_1
+worldpop_gadm_level1,input/worldpop_2015.tif,input/worldpop_area.tif,input/gadm_full/gadm36_levels.gpkg,level1,GID_1
+landscan_gadm_level1,input/landscan_2015.tif,input/landscan_area.tif,input/gadm_full/gadm36_levels.gpkg,level1,GID_1
+gpw_europe,input/gpw_2015.tif,input/gpw_area.tif,input/NUTS/NUTS_RG_01M_2021_4326.shp,,NUTS_ID
+ghsl_europe,input/ghs_2015.tif,input/ghs_area.tif,input/NUTS/NUTS_RG_01M_2021_4326.shp,,NUTS_ID
+worldpop_europe,input/worldpop_2015.tif,input/worldpop_area.tif,input/NUTS/NUTS_RG_01M_2021_4326.shp,,NUTS_ID
+landscan_europe,input/andscan_2015.tif,input/landscan_area.tif,input/NUTS/NUTS_RG_01M_2021_4326.shp,,NUTS_ID
