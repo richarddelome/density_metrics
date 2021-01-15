@@ -41,7 +41,7 @@ In practice all you have to do is put the path of your input files in the "to_pr
 
 #### The numbers
 
-They are a mess. They vary a lot across datasets, so much that I'm not sure they are very reliable at all. I expected the numbers to be different because the datasets don't all mesure exactly the same thing but not by that much. Either my calculations are totally wrong or the methods and inputs of the datasets are just too different from one another and we shouldn't count on them to give us reliable numbers.
+They are a mess. They vary a lot across datasets, so much that I'm not sure they are very reliable at all, although some metrics seem more consistent than others. I expected the numbers to be different because the datasets don't all mesure exactly the same thing but not by that much. Either my calculations are totally wrong or the methods and inputs of the datasets are just too different from one another and we shouldn't count on them to give us reliable numbers.
 
 I checked my calculations with this [paper](https://arxiv.org/pdf/2005.01167.pdf) which is pretty much the only one that has calculted population weighted density estimates at country level, using the worldpop dataset. I found the same numbers except for a few anomalies so I assumed this should work for the other datasets. But maybe this is not the case and we should use custom methods for each dataset? I don't know. 
 
