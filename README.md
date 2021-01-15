@@ -1,6 +1,5 @@
 # density_metrics
 
-# Population weighted density
 *epistemic status : I'm not an academic or a gis specialist. This is just a personal project. If you want to use this, please check my code before.*
 
 This program computes several alternative density metrics for all countries and several subregions using population gridded datasets.
