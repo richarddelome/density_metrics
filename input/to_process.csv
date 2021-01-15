@@ -1,0 +1,15 @@
+name,pop_file,area_file,shp_file,layer,geo_name
+ghsl_gadm_level0,/home/riri/Documents/projects/pwd/data/2015/ghs_2015.tif,/home/riri/Documents/projects/pwd/data/2015/ghs_area.tif,/home/riri/Documents/projects/pwd/data/gadm_full/gadm36_levels.gpkg,level0,GID_0
+worldpop_gadm_level0,/home/riri/Documents/projects/pwd/data/2015/worldpop_2015.tif,/home/riri/Documents/projects/pwd/data/2015/worldpop_2015_alternative_area.tif,/home/riri/Documents/projects/pwd/data/gadm_full/gadm36_levels.gpkg,level0,GID_0
+landscan_gadm_level0,/home/riri/Documents/projects/pwd/data/2015/landscan_2015.tif,/home/riri/Documents/projects/pwd/data/2015/landscan_area.tif,/home/riri/Documents/projects/pwd/data/gadm_full/gadm36_levels.gpkg,level0,GID_0
+gpw_gadm_level1,/home/riri/Documents/projects/pwd/data/2015/gpw_2015.tif,/home/riri/Documents/projects/pwd/data/2015/gpw_area.tif,/home/riri/Documents/projects/pwd/data/gadm_full/gadm36_levels.gpkg,level1,GID_1
+ghsl_gadm_level1,/home/riri/Documents/projects/pwd/data/2015/ghs_2015.tif,/home/riri/Documents/projects/pwd/data/2015/ghs_area.tif,/home/riri/Documents/projects/pwd/data/gadm_full/gadm36_levels.gpkg,level1,GID_1
+worldpop_gadm_level1,/home/riri/Documents/projects/pwd/data/2015/worldpop_2015.tif,/home/riri/Documents/projects/pwd/data/2015/worldpop_2015_alternative_area.tif,/home/riri/Documents/projects/pwd/data/gadm_full/gadm36_levels.gpkg,level1,GID_1
+landscan_gadm_level1,/home/riri/Documents/projects/pwd/data/2015/landscan_2015.tif,/home/riri/Documents/projects/pwd/data/2015/landscan_area.tif,/home/riri/Documents/projects/pwd/data/gadm_full/gadm36_levels.gpkg,level1,GID_1
+gpw_europe,/home/riri/Documents/projects/pwd/data/2015/gpw_2015.tif,/home/riri/Documents/projects/pwd/data/2015/gpw_area.tif,/home/riri/Documents/projects/pwd/data/NUTS/NUTS_RG_01M_2021_4326.shp,,NUTS_ID
+ghsl_europe,/home/riri/Documents/projects/pwd/data/2015/ghs_2015.tif,/home/riri/Documents/projects/pwd/data/2015/ghs_area.tif,/home/riri/Documents/projects/pwd/data/NUTS/NUTS_RG_01M_2021_4326.shp,,NUTS_ID
+worldpop_europe,/home/riri/Documents/projects/pwd/data/2015/worldpop_2015.tif,/home/riri/Documents/projects/pwd/data/2015/worldpop_2015_alternative_area.tif,/home/riri/Documents/projects/pwd/data/NUTS/NUTS_RG_01M_2021_4326.shp,,NUTS_ID
+landscan_europe,/home/riri/Documents/projects/pwd/data/2015/landscan_2015.tif,/home/riri/Documents/projects/pwd/data/2015/landscan_area.tif,/home/riri/Documents/projects/pwd/data/NUTS/NUTS_RG_01M_2021_4326.shp,,NUTS_ID
+worldpop_US_counties,/home/riri/Documents/projects/pwd/data/2015/usa_ppp_2015_1km_Aggregated_UNadj.tif,/home/riri/Documents/projects/pwd/data/2015/wp_us_area.tif,/home/riri/Documents/projects/pwd/data/gadm36_USA_shp/gadm36_USA_2.shp,,GID_2
+landscan_US_counties,/home/riri/Documents/projects/pwd/data/2015/landscan_2015.tif,/home/riri/Documents/projects/pwd/data/2015/landscan_area.tif,/home/riri/Documents/projects/pwd/data/gadm36_USA_shp/gadm36_USA_2.shp,,GID_2
+gpw_US_counties,/home/riri/Documents/projects/pwd/data/2015/gpw_2015.tif,/home/riri/Documents/projects/pwd/data/2015/gpw_area.tif,/home/riri/Documents/projects/pwd/data/gadm36_USA_shp/gadm36_USA_2.shp,,GID_2

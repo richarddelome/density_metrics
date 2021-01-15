@@ -8,7 +8,7 @@ gdal.UseExceptions()
 
 
 
-
+#this function turns a raster into a pandas dataframe, with population in the first band and area in the second.
 def make_df(raster_file):
     
     
@@ -20,17 +20,17 @@ def make_df(raster_file):
     arr_area = tif.GetRasterBand(2)
     arr_area = arr_area.ReadAsArray().flatten()
     
-    tif=None
+    tif=None #closing the gdal dataset
     df = pd.DataFrame({"pop" : arr_pop, "area" : arr_area})
     
     
     df = df[(df["pop"] >= 0) & (df["area"] > 0)] #keeping land cells only
 
-    df["pop"] = df["pop"].astype("float64") #gdal format arrays in float32 but I need float64 to compute the geometric mean (lots of decimals)
+    df["pop"] = df["pop"].astype("float64") #gdal formats arrays in float32 but I need float64 to compute the geometric mean (lots of decimals)
     df["area"] = df["area"].astype("float64")
 
 
-    df["density"] = np.divide(df["pop"],df["area"],out=np.zeros_like(df["pop"]), where=df["area"]!=0) 
+    df["density"] = np.divide(df["pop"],df["area"],out=np.zeros_like(df["pop"]), where=df["area"]!=0) #using np.divide to avoid division errors
 
     df["density"] = df["density"].astype("float64")
     
@@ -39,10 +39,11 @@ def make_df(raster_file):
     print("df done",end= " ")
     return df
 
+#this function is used to resample a raster to a lower resolution.
 def downsample(resolution):
 
     resample_dict = {
-                 "10km" : "0.083333333 0.083333333",
+                 "10km" : "0.083333333 0.083333333", #those are the numbers of the pixels size for each resolution
                 "5km" : '0.041666666 0.041666666',
                  }
     
@@ -54,7 +55,7 @@ def downsample(resolution):
     
     
 
-def rename_dic(dic,resolution): # rename the metrics after the resolution of the current raster
+def rename_dic(dic,resolution): # rename the metrics of the compute_metrics() function after the resolution of the current raster
     new_dic = dic.copy()
     for name in dic.keys():
         new_name = "{}_{}".format(resolution,name)
@@ -74,7 +75,8 @@ def gini(array): # I use this function for the gini coefficient :  https://githu
     index = np.arange(1,array.shape[0]+1) #index per array element
     n = array.shape[0]#number of array elements
     return ((np.sum((2 * index - n  - 1) * array)) / (n * np.sum(array))) #Gini coefficient
-        
+
+
 def compute_metrics(df,resol):
     
     metrics = {}
@@ -118,18 +120,19 @@ def compute_metrics(df,resol):
     return metrics
 
 
+# I use methods instead of functions here because it's easier to package all the parameters into one object.
 class Raster_base:
     def __init__(self, name, pop_file,area_file,shp_file,geo_name,layer=None):
         self.name = name
         self.pop_file = pop_file
         self.area_file = area_file
         self.shp_file = shp_file
-        self.layer = layer
+        self.layer = layer 
         self.geo_name = geo_name
         
     
-
-    def make_raster(self,geoid):
+    #this function clips my two rasters with a selected polygon and turns them into a new single raster
+    def make_raster(self,geoid): 
         if self.layer :
             command_pop = f"""gdalwarp -overwrite -cutline {self.shp_file} -crop_to_cutline -cl {self.layer} -cwhere "{self.geo_name}='{geoid}'"  {self.pop_file} pop_temp.tif"""
             command_area = f"""gdalwarp -overwrite -cutline {self.shp_file} -crop_to_cutline -cl {self.layer} -cwhere "{self.geo_name}='{geoid}'"  {self.area_file} area_temp.tif"""
@@ -146,11 +149,11 @@ class Raster_base:
         
 
 
-    
+    # function that computes the metrics for all the polygons in a shapefile and returns them as a dataframe
     def generate_estimates(self):
         
         if self.layer:
-            dst_in = fiona.open(self.shp_file, layer=self.layer)
+            dst_in = fiona.open(self.shp_file, layer=self.layer) #depending on wether my shapefile has several levels or not
         else :
             dst_in = fiona.open(self.shp_file)
 
@@ -209,7 +212,7 @@ class Raster_base:
 
 
 def main():
-    rasters_csv = "to_process.csv"
+    rasters_csv = "input/to_process.csv" #csv that contains all the paths of my input files
 
     if not os.path.exists('output'):
         os.makedirs('output')
@@ -218,7 +221,7 @@ def main():
 
     rasters_list.columns = ["name", "pop_file","area_file", "shp_file", "layer","geo_name"]
     
-    for index, row in rasters_list.iterrows():
+    for index, row in rasters_list.iterrows(): #executing the generate_estimate() function for all the lines of the csv
 
         name = row["name"]
         pop_file = row["pop_file"]
@@ -226,9 +229,9 @@ def main():
         shp = row["shp_file"]
         layer = row["layer"]
         geo_name = row["geo_name"]
-        print("layer = ", type(layer))
+        
         if layer != "":
-            raster_base = Raster_base(name, pop_file,area_file,shp, geo_name,layer)
+            raster_base = Raster_base(name, pop_file,area_file,shp, geo_name,layer) 
             
         else :
             raster_base = Raster_base(name, pop_file,area_file,shp, geo_name)
