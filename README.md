@@ -10,7 +10,7 @@ For more about this problem, you can read this excellent [article](https://theco
 Here I try to explore alternatives to traditional population density. My goal is to see whether these metrics are robust, by computing them at 3 different scales across 4 different datasets. I use population gridded datasets which split land into multiple cells of equal size and give population count for each of them. There are 4 of them : the [Worldpop](https://www.worldpop.org) project, Gridded Population of the World ([GPW](https://sedac.ciesin.columbia.edu/data/collection/gpw-v4)), the [Landscan](https://landscan.ornl.gov/) database, and the Global Human Settlement Layer ([ghsl](https://ghsl.jrc.ec.europa.eu/)).
 
 The measures are :
-- Population, area and population density. This is in order to check that these numbers are accurate compared to official estimates.
+- Population, area and population density. This is in order to check that these numbers are accurate compared to official numbers.
 - Lived cells : this is the percentage of cells where at least one person lives.
 - Lived density : this metric was invented by Alasdair Rae. It's just total population divided by lived area (the sum of lived cells areas). It's the simplest metric since it's the same as population density but without taking into account empty cells.
 
