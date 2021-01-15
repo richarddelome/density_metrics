@@ -47,7 +47,7 @@ I checked my calculations with this [paper](https://arxiv.org/pdf/2005.01167.pdf
 
 In "outputs", besides the raw numbers, you can find :
 - A big file with all the cleaned results in one place.
-- A similar file specifically for Europe, with estimates for all NUTS regions at each level
+- A similar file specifically for Europe, with estimates for all NUTS regions at each level and a comparison with official population numbers;
 - A similar file for the US, with estimates for each county. Weirdly, thus one has very similar results across datasets.
 - An excel file with comparisons of the metric across scales and dataset
 
