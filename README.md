@@ -29,7 +29,6 @@ To make this program work you need three input files :
 
 What it does for each subregion: 
 - Take the raster image of the whole country for both population count and cells size and clip them based on a given polygon to produce a smaller regional raster.
-- Then merge those two new geotifs into a single multiband raster.
 - Turn it into a pandas DataFrame and compute all the metrics.
 - Repeat the process three times at 1km, 5km and 10km pixel resolution by downsampling the raster each time using the sum resampling algorithm from gdalwarp
 - Finally, put all the data into a Dataframe and save it as a csv.
