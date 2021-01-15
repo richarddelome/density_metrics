@@ -1,4 +1,4 @@
-# density_metrics
+# Alternative density metrics
 
 *note : I'm not an academic or a gis specialist. This is just a personal project. If you want to use this, please check my code before.*
 
@@ -18,14 +18,14 @@ Here are the metrics :
 
 - Population weighted density. This is equal to the sum of all the densities of the subareas of a place weighted by the share of the population that lives on them. It means that more populated areas will have more weight in the calculus while empty areas won't have any. Thus it gives a good idea of the density at which the average citizen lives.
 
-- Population weighted density using the geometric mean instead of the arithmetic mean.  Craig, 1984 explains why the geometric mean might be a better choice : *"For a given physical size  of area,the difference between a population of 500 and 1,500 is not the same as the difference between 10,000 and 11,000 persons-even though the absolute increase in density is the same in both cases.What is relevant to the people concerned is that in the former case there are three times as many  of them while in thelatter case the increase is only 10 percent.Therefore it is the relative density difference that matters rather than the absolute one."* In practice it mostly gives less weight to very crowded city centers.
+- Population weighted density using the geometric mean instead of the arithmetic mean.  [Craig, 1984](https://www.jstor.org/stable/2061168?seq=1) explains why the geometric mean might be a better choice : *"For a given physical size  of area,the difference between a population of 500 and 1,500 is not the same as the difference between 10,000 and 11,000 persons-even though the absolute increase in density is the same in both cases.What is relevant to the people concerned is that in the former case there are three times as many  of them while in thelatter case the increase is only 10 percent.Therefore it is the relative density difference that matters rather than the absolute one."* In practice it mostly gives less weight to very crowded city centers.
 
-How the program works
+##How the program works
 
 To make this program work you need three input files : 
-- The population gridded dataset in the raster format, usually geotif.
-- A corresponding pixels areas raster file. Indeed,the cells aren't measured in km2 but in arc-seconds in these datasets and since the earth isn't a perfect sphere, the cells aren't of the same size everywhere. That's why you need a raster that gives you the size of each cell in km2 (do note that some datasets are available in km instead of arc seconds which makes things much simpler, but not all of them). You can obtain it using the area function from the Raster library in R.
-- And third, you need a shapefile containing the polygons of all the regions for wich you want to compute the numbers. I use the awesome gadm database for this.
+- A population gridded dataset in the raster format, usually geotif.
+- A corresponding raster file that gives you the area of each individual pixel. Indeed,the cells aren't measured in km2 but in arc-seconds in these datasets and since the earth isn't a perfect sphere, the cells aren't of the same size everywhere. That's why you need a raster that gives you the size of each cell in km2 (do note that some datasets are available in km instead of arc seconds which makes things much simpler, but not all of them). You can obtain it using the area function from the Raster library in R on your main raster file.
+- And third, you need a shapefile containing the polygons of all the regions for wich you want to compute the numbers. I use the awesome [gadm database](https://gadm.org/) for this.
 
 What it does for each subregion: 
 - Take the raster image of the whole country for both population count and cells size and clip them based on a polygon of the county to produce a smaller regional raster.
