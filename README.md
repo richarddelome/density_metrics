@@ -45,11 +45,13 @@ They are a mess. They vary a lot across datasets, so much that I'm not sure they
 
 I checked my calculations with this [paper](https://arxiv.org/pdf/2005.01167.pdf) which is pretty much the only one that has calculted population weighted density estimates at country level, using the worldpop dataset. I found the same numbers except for a few anomalies so I assumed this should work for the other datasets. But maybe this is not the case and we should use custom methods for each dataset? I don't know. 
 
-In "outputs", besides the raw numbers, you can find :
+In "cleaned data", besides the raw numbers, you can find :
 - A big file with all the cleaned results in one place.
 - A similar file specifically for Europe, with estimates for all NUTS regions at each level and a comparison with official population numbers;
 - A similar file for the US, with estimates for each county. Weirdly, this is the only one where the estimates are similar accross the 4 datasets.
 - An excel file with comparisons of the metric across scales and datasets
+
+I'm really not sure about the accuracy of this so please take these data with a grain of salt.
 
 
 
