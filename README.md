@@ -32,7 +32,7 @@ To make this program work you need three input files :
 
 What it does for each subregion: 
 - Take the raster image of the whole country for both population count and cells size and clip them based on a given polygon to produce a smaller regional raster.
-- Turn it into a pandas DataFrame and compute all the metrics. For this I turn each band into a numpy array and keep only the cells with population superior or equal to 0 and area strictly superior to zero.
+- Turn it into a pandas DataFrame and compute all the metrics. For this I convert each band into a numpy array and keep only the cells with population superior or equal to 0 and area strictly superior to zero.
 - Repeat the process three times at 1km, 5km and 10km pixel resolution by downsampling the raster each time using the sum resampling algorithm from gdalwarp
 
 The gdal clipping algorithm is good, however it sometimes excludes relevant cells since it takes into account only the pixels that have their centroid inside the polygon and discard the others. The gdal resampling algorithm is mostly good when dowsampling from 1km to 5km, although there can be mistakes, but a bit less so to 10km, sometimes even giving totally false numbers. 
