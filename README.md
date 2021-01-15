@@ -19,7 +19,7 @@ The measures are :
 - Population weighted density. This is equal to the sum of all the densities of the subareas of a place weighted by the share of the population that lives on them. It means that more populated areas will be given weight in the calculus while empty areas won't have any. Thus it should give us the best idea of the density at which the average citizen lives.
 
 - Population weighted density using the geometric mean instead of the arithmetic mean.  [Craig, 1984](https://www.jstor.org/stable/2061168?seq=1) explains why the geometric mean might be a better choice : 
-> *"For a given physical size  of area,the difference between a population of 500 and 1,500 is not the same as the difference between 10,000 and 11,000 persons-even though the absolute increase in density is the same in both cases.What is relevant to the people concerned is that in the former case there are three times as many  of them while in thelatter case the increase is only 10 percent.Therefore it is the relative density difference that matters rather than the absolute one."* 
+  > *"For a given physical size  of area,the difference between a population of 500 and 1,500 is not the same as the difference between 10,000 and 11,000 persons-even though the absolute increase in density is the same in both cases.What is relevant to the people concerned is that in the former case there are three times as many  of them while in thelatter case the increase is only 10 percent.Therefore it is the relative density difference that matters rather than the absolute one."* 
 
 In practice it mostly gives less weight to very crowded city centers.
 
