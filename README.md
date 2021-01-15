@@ -31,7 +31,7 @@ To make this program work you need three input files :
 - And third, you need a shapefile containing the polygons of all the regions for wich you want to compute the numbers. I use the awesome [gadm database](https://gadm.org/) for this.
 
 What it does for each subregion: 
-- Take the raster image of the whole country for both population count and cells size and clip them based on a given polygon to produce a smaller regional raster.
+- Take the input raster image for both population count and cells size and clip them based on a given polygon to produce a smaller regional raster.
 - Turn it into a pandas DataFrame and compute all the metrics. For this I convert each band into a numpy array and keep only the cells with population superior or equal to 0 and area strictly superior to zero.
 - Repeat the process three times at 1km, 5km and 10km pixel resolution by downsampling the raster each time using the sum resampling algorithm from gdalwarp
 
