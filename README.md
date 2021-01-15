@@ -24,7 +24,7 @@ Here are the metrics :
 
 To make this program work you need three input files : 
 - A population gridded dataset in the raster format, usually geotif.
-- A corresponding raster file that gives you the area of each individual pixel. Indeed,the cells aren't measured in km2 but in arc-seconds in these datasets and since the earth isn't a perfect sphere, the cells aren't of the same size everywhere. That's why you need a raster that gives you the size of each cell in km2 (do note that some datasets are available in km instead of arc seconds which makes things much simpler, but not all of them). You can obtain it using the area function from the Raster library in R on your main raster file.
+- A corresponding raster file that gives you the area of each individual pixel. Indeed,the cells aren't measured in km2 but in arc-seconds in these datasets and since the earth isn't a perfect sphere, the cells aren't of the same size everywhere. That's why you need a raster that gives you the size of each cell in km2 (do note that some datasets are available in km instead of arc seconds which makes things much simpler, but not all of them). You can can get this by the area function from the Raster library in R on your main raster file.
 - And third, you need a shapefile containing the polygons of all the regions for wich you want to compute the numbers. I use the awesome [gadm database](https://gadm.org/) for this.
 
 What it does for each subregion: 
