@@ -49,7 +49,7 @@ In "outputs", besides the raw numbers, you can find :
 - A big file with all the cleaned results in one place.
 - A similar file specifically for Europe, with estimates for all NUTS regions at each level and a comparison with official population numbers;
 - A similar file for the US, with estimates for each county. Weirdly, this is the only one where the estimates are similar accross the 4 datasets.
-- An excel file with comparisons of the metric across scales and dataset
+- An excel file with comparisons of the metric across scales and datasets
 
 
 
