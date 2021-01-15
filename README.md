@@ -1,13 +1,13 @@
 # density_metrics
 
-*epistemic status : I'm not an academic or a gis specialist. This is just a personal project. If you want to use this, please check my code before.*
+*note : I'm not an academic or a gis specialist. This is just a personal project. If you want to use this, please check my code before.*
 
 This program computes several alternative density metrics for all countries and several subregions using population gridded datasets.
 
 While everyone knows about population density, this number has its limitations, particularly if you want to interpret it as a measure of "crowdedness". The problem is that it takes into account all areas indiscriminately , even vast empty land. For example, the Sahara desert makes up 90% of Algeria's surface, which means Algeria has a fairly low population density. But, because of this huge bias, population density tells us very little about how crowded the remaining 10% land is. 
 For more about this problem, you can read this excellent [article](https://theconversation.com/think-your-country-is-crowded-these-maps-reveal-the-truth-about-population-density-across-europe-90345).
 
-Here I try to explore alternatives to traditional population density. My goal is to see whether these metrics are robust, by computing them at 3 different scales across 4 different datasets. I use population gridded datasets, which split land into multiple, equal size, cells and give population count for each of them. There are 4 of them : the worldpop project, Gridded Populations of the World (GPW), the Landscan database and the Global Human Settlement Layer (ghsl).
+Here I try to explore alternatives to traditional population density. My goal is to see whether these metrics are robust, by computing them at 3 different scales across 4 different datasets. I use population gridded datasets, which split land into multiple, equal size, cells and give population count for each of them. There are 4 of them : the [worldpop project](https://www.worldpop.org), [Gridded Population of the World (GPW)](https://sedac.ciesin.columbia.edu/data/collection/gpw-v4), the [Landscan database](https://landscan.ornl.gov/), and the [Global Human Settlement Layer (ghsl)](https://ghsl.jrc.ec.europa.eu/).
 
 Here are the metrics :
 - First I provide estimates for population, area and population density. This is in order to check that these numbers are accurate compared to official estimates.
