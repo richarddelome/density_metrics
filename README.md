@@ -36,7 +36,7 @@ What it does for each subregion:
 - Repeat the process three times at 1km, 5km and 10km pixel resolution by downsampling the raster each time using the sum resampling algorithm from gdalwarp
 - Finally, put all the data into a Dataframe and save it as a csv.
 
-The gdal clipping algorithm is good, however it sometimes excludes relevant cells since it takes into account only the pixels that have their centroid inside the polygon and discard the others. The gdal resampling algorithm is mostly good when dowsampling from 1km to 5km, although there can be mistakes, but a bit less so to 10km, sometimes giving totally false numbers. 
+The gdal clipping algorithm is good, however it sometimes excludes relevant cells since it takes into account only the pixels that have their centroid inside the polygon and discard the others. The gdal resampling algorithm is mostly good when dowsampling from 1km to 5km, although there can be mistakes, but a bit less so to 10km, sometimes even giving totally false numbers. 
 
 In practice all you have to do is put the path of your input files in the "to_process.csv" and then launch the program. You can execute it on several datasets and several shapefiles, one per row.
 
