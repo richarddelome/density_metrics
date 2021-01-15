@@ -39,9 +39,16 @@ The gdal clipping algorithm is good, however it sometimes excludes relevant cell
 
 In practice all you have to do is put the path of your input files in the "to_process.csv" and then launch the program. You can execute it on several datasets and several shapefiles, one per row.
 
+####The numbers
 
-The current dataset can be downloaded [here](https://drive.google.com/file/d/1vgFtk9XqVHYdP4CRt-pU7ZJWnXFZhw7W/view?usp=sharing). I want to emphasize that these are only appromixate numbers. 
+They are a mess. They vary a lot across datasets, so much that I'm not sure they are very reliable at all. Either my calculations are totally wrong or the methods and inputs of the datasets are just too different from one another and we shouldn't count on them to give us reliable numbers.
+I checked my calculations by using this [paper](https://arxiv.org/pdf/2005.01167.pdf), which is pretty the much the only one that has computed population weighted density estimates at country level, using the worldpop dataset. I find very similar numbers using my method which makes me think this should work for the other datasets. But maybe this is not the case and we should use custom methods for each dataset? I don't know.
 
+In "outputs", besides the raw numbers, you can find :
+- A big file with all the clean results in one place.
+- A similar file specifically for Europe, with estimates for all NUTS regions at each level
+- A similar file for the US, with estimates for each county. Weirdly, thus one has very similar results across datasets.
+- An excel file with comparisons of the metric across scales and dataset
 
 
 
