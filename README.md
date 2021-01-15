@@ -2,7 +2,7 @@
 
 *note : I'm not an academic or a gis specialist. This is just a personal project. If you want to use this, please check my code before.*
 
-This script computes several alternative density metrics for all countries and there first level subregions using population gridded datasets.
+This script computes several alternative density metrics for all countries and their first level subregions using population gridded datasets.
 
 While everyone knows about population density, this number has its limitations, particularly if you want to interpret it as a measure of "crowdedness". The problem is that it takes into account all areas indiscriminately , even vast empty land. For example, the Sahara desert makes up 90% of Algeria's surface, which means Algeria has a fairly low population density. But, because of this huge bias, population density tells us very little about how crowded the remaining 10% land is. 
 For more about this problem, you can read this excellent [article](https://theconversation.com/think-your-country-is-crowded-these-maps-reveal-the-truth-about-population-density-across-europe-90345).
