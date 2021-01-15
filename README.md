@@ -14,7 +14,7 @@ The measures are :
 - Lived cells : this is the percentage of cells where at least one person lives.
 - Lived density : I got this one from Alasdair Rae. It's just total population divided by lived area (the sum of lived cells areas). It's the simplest metric since it's the same as population density but without taking into account empty cells.
 
-- Population gini index : this is like the gini index for wealth inequality but applied to population location. Instead of measuring how much wealth is concentrated among a population, it measures how population is concentrated on a given land. At 0, the population is distributed evenly across all cells, while at 1 all the population is located in one cell and all the others are empty. This is not exactly about density but still pretty interesting.
+- Population gini index : this is like the gini index for wealth inequality but applied to population location. Instead of measuring how much wealth is concentrated among a population, it measures how population is concentrated on a given land. At 0, the population is distributed evenly across all cells, while at 1 all the population is located in one cell and all the others are empty. This is more about emptiness than density but still pretty interesting.
 
 - Population weighted density. This is equal to the sum of all the densities of the subareas of a place weighted by the share of the population that lives on each of them. It means that more populated areas will be given more weight in the calculus while empty areas won't have any. Thus it should give us the best idea of the density at which the average citizen lives.
 
