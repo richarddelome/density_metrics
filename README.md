@@ -2,15 +2,15 @@
 
 *note : I'm not an academic or a gis specialist. This is just a personal project. If you want to use this, please check my code before.*
 
-This program computes several alternative density metrics for all countries and several subregions using population gridded datasets.
+This script computes several alternative density metrics for all countries and there first level subregions using population gridded datasets.
 
 While everyone knows about population density, this number has its limitations, particularly if you want to interpret it as a measure of "crowdedness". The problem is that it takes into account all areas indiscriminately , even vast empty land. For example, the Sahara desert makes up 90% of Algeria's surface, which means Algeria has a fairly low population density. But, because of this huge bias, population density tells us very little about how crowded the remaining 10% land is. 
 For more about this problem, you can read this excellent [article](https://theconversation.com/think-your-country-is-crowded-these-maps-reveal-the-truth-about-population-density-across-europe-90345).
 
 Here I try to explore alternatives to traditional population density. My goal is to see whether these metrics are robust, by computing them at 3 different scales across 4 different datasets. I use population gridded datasets, which split land into multiple cells of equal size and give population count for each of them. There are 4 of them : the [worldpop](https://www.worldpop.org) project, Gridded Population of the World [(GPW)](https://sedac.ciesin.columbia.edu/data/collection/gpw-v4), the [Landscan](https://landscan.ornl.gov/) database, and the Global Human Settlement Layer [(ghsl)](https://ghsl.jrc.ec.europa.eu/).
 
-Here are the metrics :
-- First I provide estimates for population, area and population density. This is in order to check that these numbers are accurate compared to official estimates.
+The measures are :
+- Population, area and population density. This is in order to check that these numbers are accurate compared to official estimates.
 - Lived cells : this is the percentage of cells where at least one person lives.
 - Lived density : this metric was invented by Alasdair Rae. It's just total population divided by lived area (the sum of lived cells areas). It's the simplest metric since it's the same as population density but without taking into account empty cells.
 
@@ -18,7 +18,8 @@ Here are the metrics :
 
 - Population weighted density. This is equal to the sum of all the densities of the subareas of a place weighted by the share of the population that lives on them. It means that more populated areas will be given weight in the calculus while empty areas won't have any. Thus it gives a good idea of the density at which the average citizen lives.
 
-- Population weighted density using the geometric mean instead of the arithmetic mean.  [Craig, 1984](https://www.jstor.org/stable/2061168?seq=1) explains why the geometric mean might be a better choice : *"For a given physical size  of area,the difference between a population of 500 and 1,500 is not the same as the difference between 10,000 and 11,000 persons-even though the absolute increase in density is the same in both cases.What is relevant to the people concerned is that in the former case there are three times as many  of them while in thelatter case the increase is only 10 percent.Therefore it is the relative density difference that matters rather than the absolute one."* In practice it mostly gives less weight to very crowded city centers.
+- Population weighted density using the geometric mean instead of the arithmetic mean.  [Craig, 1984](https://www.jstor.org/stable/2061168?seq=1) explains why the geometric mean might be a better choice : 
+> *"For a given physical size  of area,the difference between a population of 500 and 1,500 is not the same as the difference between 10,000 and 11,000 persons-even though the absolute increase in density is the same in both cases.What is relevant to the people concerned is that in the former case there are three times as many  of them while in thelatter case the increase is only 10 percent.Therefore it is the relative density difference that matters rather than the absolute one."* In practice it mostly gives less weight to very crowded city centers.
 
 #### How it works
 
