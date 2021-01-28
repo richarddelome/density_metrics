@@ -1,6 +1,7 @@
 ## Alternative density metrics
 
 *note : I'm not an academic or a gis specialist. This is just a personal project. If you want to use this, please check my code before.*
+
 *second note : I see the worldpop project has done the same thing [here](https://www.worldpop.org/methods/pwd). You should use their numbers instead of mine, although they don't do exactly the same thing.*
 
 This script computes several alternative density metrics for all countries and their first level subregions using population gridded datasets.
