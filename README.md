@@ -27,6 +27,8 @@ The measures are :
 
 #### How it works
 
+I used this bit of code by Robin Edwards ([@geoteory](https://twitter.com/geotheory) as the basis for this script.
+
 To make this program work you need three input files : 
 - A population gridded dataset in the raster format, usually geotif.
 - A corresponding raster file that gives you the area of each individual pixel. Indeed,the cells aren't measured in km2 but in arc-seconds in these datasets and since the earth isn't a perfect sphere, the cells aren't of the same size everywhere. So you need it to calculate accurate pixel level density numbers. You can get this by using the Area function from the Raster library in R on your main raster file.(do note that some datasets are available in km instead of arc seconds which makes things much simpler, but not all of them)
