@@ -27,7 +27,7 @@ The measures are :
 
 #### How it works
 
-I used this bit of code by Robin Edwards ([@geotheory](https://twitter.com/geotheory) on twitter) as the basis for this script.
+I used [this bit of code](https://gist.github.com/geotheory/ff9ab2c9c3684cfa626c24b145029bbc) by Robin Edwards ([@geotheory](https://twitter.com/geotheory) on twitter) as the basis for this script/
 
 To make this program work you need three input files : 
 - A population gridded dataset in the raster format, usually geotif.
